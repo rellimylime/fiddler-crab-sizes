@@ -1,0 +1,11 @@
+---
+title: "EDS221 Morning Activities"
+format: html
+editor: visual
+---
+
+### Setup
+```{r}
+library(lterdatasampler)
+```
+
