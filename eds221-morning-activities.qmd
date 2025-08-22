@@ -10,14 +10,22 @@ execute:
 ---
 
 ### Setup
-
-# Howdy
-
 ```{r}
-#| fig-caption: "A splendid graph"
 library(lterdatasampler)
 library(tidyverse)
+```
+
+## Graph
+```{r}
+#| fig-caption: "A splendid graph"
 head(pie_crab)
 pie_crab %>% ggplot(aes(y = size, x = latitude)) +
   geom_col()
 ```
+## Summary Table
+```{r}
+summary_table <- pie_crab %>%
+  group_by(site) %>%
+  summarize(mean_size = round(mean(size, na.rm = TRUE),2), std_size = round(sd(size, na.rm = TRUE), 2), n = n())
+```
+
