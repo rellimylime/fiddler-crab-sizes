@@ -4,14 +4,16 @@ format: html
 editor: visual
 execute:
   echo: false
-  #warning: false
+  warning: false
   #error: false
-  #message: false
+  message: true
 ---
+# Overview
+The following document contains two figures generated from the `pie_crab` dataset in the `lterdatasampler` package. The first figure is a bar graph showing the relationship between carapace width and latitude. The second figure is a summary table that provides the mean carapace width, standard deviation, and count of observations for each site.
 
-### Setup
 
 ```{r}
+# Setup
 library(lterdatasampler)
 library(tidyverse)
 ```
@@ -19,8 +21,8 @@ library(tidyverse)
 ## Graph
 
 ```{r}
-#| fig-caption: "A splendid graph"
-head(pie_crab)
+#| fig-cap: "A splendid graph"
+# head(pie_crab)
 pie_crab %>% ggplot(aes(y = size, x = latitude)) +
   geom_col()
 ```
