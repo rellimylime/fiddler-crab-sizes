@@ -2,6 +2,11 @@
 title: "EDS221 Morning Activities"
 format: html
 editor: visual
+execute:
+  echo: false
+  #warning: false
+  #error: false
+  #message: false
 ---
 
 ### Setup
@@ -9,6 +14,10 @@ editor: visual
 # Howdy
 
 ```{r}
+#| fig-caption: "A splendid graph"
 library(lterdatasampler)
-
+library(tidyverse)
+head(pie_crab)
+pie_crab %>% ggplot(aes(y = size, x = latitude)) +
+  geom_col()
 ```
