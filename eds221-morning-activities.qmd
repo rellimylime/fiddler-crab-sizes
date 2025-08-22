@@ -5,7 +5,10 @@ editor: visual
 ---
 
 ### Setup
+
+# Howdy
+
 ```{r}
 library(lterdatasampler)
-```
 
+```
