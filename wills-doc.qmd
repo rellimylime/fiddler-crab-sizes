@@ -5,4 +5,12 @@ editor: visual
 ---
 
 ## Quarto
+```{r}
+library(lterdatasampler)
+library(tidyverse)
+head(pie_crab)
+pie_crab %>% ggplot(aes(y = size, x = latitude)) +
+  geom_col()
+
+```
 
